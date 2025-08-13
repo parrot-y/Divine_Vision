@@ -8,8 +8,7 @@ const products = [
     price: 850,
     description: "High-quality Portland cement for construction projects",
     category: "BUILDING",
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/162539/architecture-building-site-build-162539.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
   },
   {
     id: 2,
@@ -17,8 +16,7 @@ const products = [
     price: 1200,
     description: "Grade 60 steel bars for concrete reinforcement",
     category: "BUILDING",
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/416978/pexels-photo-416978.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
   },
   {
     id: 3,
@@ -26,8 +24,7 @@ const products = [
     price: 450,
     description: "Copper electrical wire for residential wiring",
     category: "ELECTRICAL",
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
   },
   {
     id: 4,
@@ -35,8 +32,7 @@ const products = [
     price: 1200,
     description: "32A circuit breaker for electrical panels",
     category: "ELECTRICAL",
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
   },
   {
     id: 5,
@@ -44,8 +40,7 @@ const products = [
     price: 2800,
     description: "High-quality plywood board for construction",
     category: "BOARDS",
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
   },
   {
     id: 6,
@@ -53,8 +48,7 @@ const products = [
     price: 350,
     description: "PVC pipe for plumbing applications",
     category: "PLUMBING",
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
   },
   {
     id: 7,
@@ -62,8 +56,7 @@ const products = [
     price: 250,
     description: "Professional paint brush set for various surfaces",
     category: "PAINTS",
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
   },
   {
     id: 8,
@@ -71,8 +64,7 @@ const products = [
     price: 800,
     description: "Heavy-duty hammer for construction work",
     category: "TOOLS",
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/209235/pexels-photo-209235.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
   },
   {
     id: 9,
@@ -80,8 +72,7 @@ const products = [
     price: 1800,
     description: "Premium laminate flooring for modern homes",
     category: "EGGER ACCESSORIES",
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
   },
   {
     id: 10,
@@ -89,8 +80,7 @@ const products = [
     price: 650,
     description: "Elegant door handle set for interior doors",
     category: "FINISHING",
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/277559/pexels-photo-277559.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
   },
   {
     id: 11,
@@ -98,8 +88,7 @@ const products = [
     price: 120,
     description: "High-quality underlay for laminate flooring",
     category: "FLOORING ACCESSORIES",
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
   },
   {
     id: 12,
@@ -107,8 +96,7 @@ const products = [
     price: 180,
     description: "Heavy-duty hinges for doors and cabinets",
     category: "IRONMONGERY",
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/277559/pexels-photo-277559.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
   },
 ];
 

@@ -7,8 +7,7 @@ const products = [
     name: "Cement 50kg Bag",
     category: "BUILDING",
     price: 850,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/162539/architecture-building-site-build-162539.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     description: "High-quality Portland cement for construction projects",
     stock: 100,
     unit: "Bag",
@@ -18,8 +17,7 @@ const products = [
     name: "Steel Bars 6mm",
     category: "BUILDING",
     price: 1200,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/416978/pexels-photo-416978.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     description: "Reinforcement steel bars for concrete structures",
     stock: 50,
     unit: "Piece",
@@ -29,8 +27,7 @@ const products = [
     name: "Electrical Wire 2.5mm",
     category: "ELECTRICAL",
     price: 450,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     description: "Copper electrical wire for domestic wiring",
     stock: 200,
     unit: "Meter",
@@ -40,8 +37,7 @@ const products = [
     name: "Circuit Breaker 32A",
     category: "ELECTRICAL",
     price: 1800,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     description: "32A circuit breaker for electrical protection",
     stock: 25,
     unit: "Piece",
@@ -51,8 +47,7 @@ const products = [
     name: "Plywood 4x8ft",
     category: "BOARDS",
     price: 3200,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     description: "High-quality plywood sheets for construction",
     stock: 30,
     unit: "Sheet",
@@ -62,8 +57,7 @@ const products = [
     name: "MDF Board 18mm",
     category: "BOARDS",
     price: 2800,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     description: "Medium density fiberboard for furniture making",
     stock: 20,
     unit: "Sheet",
@@ -73,8 +67,7 @@ const products = [
     name: "Door Handle Set",
     category: "EGGER ACCESSORIES",
     price: 1500,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/277559/pexels-photo-277559.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     description: "Modern door handle set with lock mechanism",
     stock: 15,
     unit: "Set",
@@ -84,8 +77,7 @@ const products = [
     name: "Cabinet Hinges",
     category: "EGGER ACCESSORIES",
     price: 800,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/277559/pexels-photo-277559.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     description: "Soft-close cabinet hinges for smooth operation",
     stock: 40,
     unit: "Pair",
@@ -95,8 +87,7 @@ const products = [
     name: "Interior Paint 20L",
     category: "PAINTS",
     price: 4500,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     description: "Premium interior wall paint, washable finish",
     stock: 35,
     unit: "Litre",
@@ -106,8 +97,7 @@ const products = [
     name: "Exterior Paint 20L",
     category: "PAINTS",
     price: 5200,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     description: "Weather-resistant exterior paint for buildings",
     stock: 25,
     unit: "Litre",
@@ -117,8 +107,7 @@ const products = [
     name: "PVC Pipes 4inch",
     category: "PLUMBING",
     price: 1800,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     description: "4-inch PVC pipes for drainage systems",
     stock: 60,
     unit: "Meter",
@@ -128,8 +117,7 @@ const products = [
     name: "Water Tap",
     category: "PLUMBING",
     price: 1200,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/6195125/pexels-photo-6195125.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     description: "Modern water tap with ceramic disc technology",
     stock: 30,
     unit: "Piece",
@@ -139,8 +127,7 @@ const products = [
     name: "LED Bulb 9W",
     category: "LIGHTING",
     price: 350,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     description: "Energy-efficient LED bulb, equivalent to 60W incandescent",
     stock: 150,
     unit: "Piece",
@@ -150,8 +137,7 @@ const products = [
     name: "Ceiling Fan",
     category: "LIGHTING",
     price: 4500,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     description: "52-inch ceiling fan with remote control",
     stock: 20,
     unit: "Piece",
@@ -161,8 +147,7 @@ const products = [
     name: "Safety Helmet",
     category: "SAFETY",
     price: 800,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     description: "Hard hat for construction site safety",
     stock: 80,
     unit: "Piece",
@@ -172,8 +157,7 @@ const products = [
     name: "Safety Boots",
     category: "SAFETY",
     price: 2500,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     description: "Steel-toe safety boots for construction workers",
     stock: 45,
     unit: "Pair",
@@ -183,8 +167,7 @@ const products = [
     name: "Measuring Tape 5m",
     category: "TOOLS",
     price: 450,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/209235/pexels-photo-209235.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     description: "5-meter retractable measuring tape",
     stock: 100,
     unit: "Piece",
@@ -194,8 +177,7 @@ const products = [
     name: "Hammer 1kg",
     category: "TOOLS",
     price: 1200,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/209235/pexels-photo-209235.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     description: "1kg claw hammer for construction work",
     stock: 60,
     unit: "Piece",
@@ -205,8 +187,7 @@ const products = [
     name: "Drill Bit Set",
     category: "TOOLS",
     price: 1800,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/209235/pexels-photo-209235.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     description: "Complete set of drill bits for various materials",
     stock: 25,
     unit: "Set",
@@ -216,8 +197,7 @@ const products = [
     name: "Screwdriver Set",
     category: "TOOLS",
     price: 950,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/209235/pexels-photo-209235.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     description: "Set of 6 screwdrivers with different head types",
     stock: 40,
     unit: "Set",
@@ -227,8 +207,7 @@ const products = [
     name: "Floor Tiles 60x60cm",
     category: "FLOORING ACCESSORIES",
     price: 2800,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     description: "Ceramic floor tiles, 60x60cm, various colors available",
     stock: 200,
     unit: "Square Meter",
@@ -238,8 +217,7 @@ const products = [
     name: "Grout 5kg",
     category: "FLOORING ACCESSORIES",
     price: 1200,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     description: "Tile grout for filling gaps between tiles",
     stock: 80,
     unit: "Bag",
@@ -249,8 +227,7 @@ const products = [
     name: "Door Locks",
     category: "IRONMONGERY",
     price: 2500,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/277559/pexels-photo-277559.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     description: "High-security door locks with keys",
     stock: 30,
     unit: "Set",
@@ -260,8 +237,7 @@ const products = [
     name: "Window Hinges",
     category: "IRONMONGERY",
     price: 800,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/277559/pexels-photo-277559.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     description: "Heavy-duty window hinges for various window types",
     stock: 60,
     unit: "Pair",
@@ -271,8 +247,7 @@ const products = [
     name: "Wall Putty 20kg",
     category: "FINISHING",
     price: 1800,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop",
+    image: "https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
     description: "Wall putty for smooth wall finishing before painting",
     stock: 45,
     unit: "Bag",
