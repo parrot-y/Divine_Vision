@@ -8,7 +8,7 @@ const products = [
     price: 850,
     description: "High-quality Portland cement for construction projects",
     category: "BUILDING",
-    image: "https://images.pexels.com/photos/162539/architecture-building-site-build-162539.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9BODq6f4ulP_akwK0eNFEzCN5q3z0lAlNHA&s",
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const products = [
     price: 1200,
     description: "Grade 60 steel bars for concrete reinforcement",
     category: "BUILDING",
-    image: "https://images.pexels.com/photos/416978/pexels-photo-416978.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUAaj4EeZR9v0cUQxHQdFeC50k8e-kl9QuWw&s",
   },
   {
     id: 3,
