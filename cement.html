@@ -64,10 +64,10 @@
           />
           <div class="p-4">
             <div class="product-name">Bamburi Cement</div>
-            <div class="price">50kg Bags</div>
+            <div class="product-description">50kg Bags</div>
             <button
               class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#FFBF00] text-gray-900 rounded-md"
-              onclick="getQuote('Bamburi Cement', 0)"
+              onclick="getQuote('Bamburi Cement'"
             >
               Get Quote
             </button>
@@ -82,10 +82,10 @@
           />
           <div class="p-4">
             <div class="product-name">Rhino Cement</div>
-            <div class="price">50kg Bags</div>
+            <div class="product-description">50kg Bags</div>
             <button
               class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#FFBF00] text-gray-900 rounded-md"
-              onclick="getQuote('Rhino Cement', 0)"
+              onclick="getQuote('Rhino Cement'"
             >
               Get Quote
             </button>
@@ -100,10 +100,10 @@
           />
           <div class="p-4">
             <div class="product-name">Simba Cement</div>
-            <div class="price">50kg Bags</div>
+            <div class="product-description">50kg Bags</div>
             <button
               class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#FFBF00] text-gray-900 rounded-md"
-              onclick="getQuote('Simba Cement', 0)"
+              onclick="getQuote('Simba Cement'"
             >
               Get Quote
             </button>
@@ -118,10 +118,10 @@
           />
           <div class="p-4">
             <div class="product-name">White Cement</div>
-            <div class="price">25kg Bags</div>
+            <div class="product-description">25kg Bags</div>
             <button
               class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#FFBF00] text-gray-900 rounded-md"
-              onclick="getQuote('White Cement', 0)"
+              onclick="getQuote('White Cement'"
             >
               Get Quote
             </button>
@@ -136,10 +136,10 @@
           />
           <div class="p-4">
             <div class="product-name">Tile Adhesive</div>
-            <div class="price">25kg Bags</div>
+            <div class="product-description">25kg Bags</div>
             <button
               class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#FFBF00] text-gray-900 rounded-md"
-              onclick="getQuote('Tile Adhesive', 0)"
+              onclick="getQuote('Tile Adhesive'"
             >
               Get Quote
             </button>
@@ -154,10 +154,10 @@
           />
           <div class="p-4">
             <div class="product-name">Cement Blocks</div>
-            <div class="price">Pieces</div>
+            <div class="product-description">Pieces</div>
             <button
               class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#FFBF00] text-gray-900 rounded-md"
-              onclick="getQuote('Cement Blocks', 0)"
+              onclick="getQuote('Cement Blocks'"
             >
               Get Quote
             </button>
@@ -175,7 +175,7 @@
     </button>
 
     <script>
-      function getQuote(productName, price) {
+      function getQuote(productName) {
         const message = `Hi! I'm interested in ${productName}${
           price > 0 ? ` (KES ${price})` : ""
         }. Can you provide more details and pricing?`;

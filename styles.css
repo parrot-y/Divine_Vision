@@ -385,8 +385,8 @@ footer .max-w-screen-4xl {
   align-items: center;
 }
 
-/* Price */
-.price {
+/* Product Description */
+.product-description {
   font-size: 1.125rem;
   font-weight: 700;
   color: #1f2937;
