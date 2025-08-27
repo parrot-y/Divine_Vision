@@ -396,8 +396,8 @@ footer .max-w-screen-4xl {
 /* Product Card Button */
 .product-card button {
   width: 100%;
-  background: #ffbf00;
-  color: #1f2937;
+  background: #064b67;
+  color: white;
   border: none;
   padding: 0.75rem 1rem;
   border-radius: 8px;
@@ -413,9 +413,9 @@ footer .max-w-screen-4xl {
 }
 
 .product-card button:hover {
-  background: #f59e0b;
+  background: #053a52;
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(255, 191, 0, 0.3);
+  box-shadow: 0 10px 25px -5px rgba(6, 75, 103, 0.3);
 }
 
 /* Hide complex elements by default */
