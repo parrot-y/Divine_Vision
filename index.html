@@ -17,8 +17,8 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body class="bg-white text-gray-900">
-      <!-- Top Notice Bar -->
-      <div class="w-full bg-[#FFBF00] text-gray-900">
+    <!-- Top Notice Bar -->
+    <div class="w-full bg-[#FFBF00] text-gray-900">
       <div class="max-w-screen-4xl mx-auto px-4 md:px-8">
         <div class="hidden lg:flex justify-between items-center py-2">
           <div class="flex items-center space-x-3 text-xs font-medium">
@@ -191,7 +191,7 @@
             class="px-3 py-2 rounded-md text-[#064b67] hover:bg-gray-100"
             >Contact</a
           >
-                      <button onclick="toggleCart()" class="px-3 py-2 rounded-md text-white bg-[#064b67] hover:bg-[#053a52] flex items-center gap-2">
+          <button onclick="toggleCart()" class="px-3 py-2 rounded-md text-white bg-[#064b67] hover:bg-[#053a52] flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="9" cy="21" r="1"></circle>
               <circle cx="20" cy="21" r="1"></circle>
@@ -200,6 +200,56 @@
             Cart (<span id="cart-count">0</span>)
           </button>
         </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobileMenuBtn"
+          class="md:hidden p-2 text-[#064b67] hover:bg-gray-100 rounded-md"
+          onclick="toggleMobileMenu()"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-200">
+        <div class="px-4 py-2 space-y-1">
+          <a href="./roofing-mabati.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
+            🏗️ Roofing & Mabati
+          </a>
+          <a href="./cement.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
+            🧱 Cement
+          </a>
+          <a href="./steel-rebar.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
+            🔩 Steel & Rebar
+          </a>
+          <a href="./electrical.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
+            💡 Electrical
+          </a>
+          <a href="./paint-finishes.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
+            🎨 Paint & Finishes
+          </a>
+          <a href="./pvc-floors.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
+            🪵 PVC Floors
+          </a>
+          <a href="./tools.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
+            🛠️ Tools
+          </a>
+          <a href="./plumbing.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
+            🚰 Plumbing
+          </a>
+          <a href="#contact" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
+            📞 Contact
+          </a>
+          <button onclick="toggleCart()" class="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md flex items-center gap-2">
+            🛒 Cart (<span id="mobile-cart-count">0</span>)
+          </button>
+        </div>
+      </div>
       </div>
     </div>
 
@@ -637,7 +687,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                   </svg>
-                  <span>Banana, Kimabu, Kenya</span>
+                  <span>Kiambu, Kenya</span>
                 </div>
                 <div class="flex items-center">
                   <svg class="w-5 h-5 text-[#FFBF00] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -649,7 +699,7 @@
                   <svg class="w-5 h-5 text-[#FFBF00] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                   </svg>
-                  <span>Mon-Sat: 8:00 AM - 6:00 PM</span>
+                  <span>Mon-Sat: 6:30 AM - 6:00 PM</span>
                 </div>
               </div>
               <div class="mt-6">
@@ -681,8 +731,8 @@
           <!-- Product 1 -->
         <div class="product-card">
             <img
-              src="https://aanddstore.co.ke/_app/immutable/assets/v2.gkABXjH_.webp"
-              alt="Bamburi Cement"
+              src="./assets/images/products/Bamburi50kg.webp"
+              alt="Bamburi Cement 50kg"
             />
           <div class="p-4">
               <div class="product-name">Bamburi Cement 50kg</div>
@@ -699,7 +749,7 @@
           <!-- Product 2 -->
         <div class="product-card">
             <img
-              src="https://www.homedepot.com/b/Building-Materials-Roofing-Metal-Roofing/N-5yc1vZar7l"
+              src="./assets/images/products/ordinarymabati.webp"
               alt="2m Ordinary Mabati 32G"
             />
           <div class="p-4">
@@ -717,7 +767,7 @@
           <!-- Product 3 -->
         <div class="product-card">
             <img
-              src="https://images.unsplash.com/photo-1581090126851-9ce9f3b2f76c?q=80&w=800&auto=format&fit=crop"
+              src="./assets/images/products/steelreinforcementbar.jpg"
               alt="Steel Reinforcement Bars"
             />
           <div class="p-4">
@@ -735,12 +785,12 @@
           <!-- Product 4 -->
         <div class="product-card">
             <img
-              src="https://www.homedepot.com/b/Building-Materials-Drywall/N-5yc1vZar6y"
+              src="./assets/images/products/gypsumboard9mm.jpg"
               alt="Gypsum Board 9mm"
             />
           <div class="p-4">
               <div class="product-name">Gypsum Board 9mm</div>
-              <div class="product-description">Pieces</div>
+              <div class="product-description">Quality drywall for interior walls</div>
               <button
                 class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#064b67] text-white rounded-md"
                 onclick="addToCart('Gypsum Board 9mm', 'Quality drywall for interior walls')"
@@ -759,15 +809,15 @@
           <!-- Product 1 -->
           <div class="product-card">
             <img
-              src="https://www.homedepot.com/b/Tools-Power-Tool-Accessories-Saw-Blades-Diamond-Blades/4-1-2-in/N-5yc1vZc6a3Z1z0x8qw"
-              alt="4.5" Diamond Cutting Disk A"
+              src="./assets/images/products/4.5&quot; Diamond Cutting Disk A.avif"
+              alt="4.5&quot; Diamond Cutting Disk A"
             />
             <div class="p-4">
               <div class="product-name">4.5" Diamond Cutting Disk A</div>
               <div class="product-description">Professional cutting disk for construction</div>
               <button
                 class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#064b67] text-white rounded-md"
-                onclick="addToCart('4.5" Diamond Cutting Disk A', 'Professional cutting disk for construction')"
+                onclick="addToCart('4.5&quot; Diamond Cutting Disk A', 'Professional cutting disk for construction')"
               >
                 Add to Cart
               </button>
@@ -777,15 +827,15 @@
           <!-- Product 2 -->
           <div class="product-card">
             <img
-              src="https://images.homedepot.com/productImages/203192091-64-1000.jpg"
-              alt="4.5" Flap Disc P80"
+              src="./assets/images/products/4.5&quot; Flap Disc P80.avif"
+              alt="4.5&quot; Flap Disc P80"
             />
             <div class="p-4">
               <div class="product-name">4.5" Flap Disc P80</div>
               <div class="product-description">High-quality flap disc for surface finishing</div>
               <button
                 class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#064b67] text-white rounded-md"
-                onclick="addToCart('4.5" Flap Disc P80', 'High-quality flap disc for surface finishing')"
+                onclick="addToCart('4.5&quot; Flap Disc P80', 'High-quality flap disc for surface finishing')"
               >
                 Add to Cart
               </button>
@@ -795,7 +845,7 @@
           <!-- Product 3 -->
           <div class="product-card">
             <img
-              src="https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62?q=80&w=800&auto=format&fit=crop"
+              src="./assets/images/products/Metal Hammer.jpeg"
               alt="Metal Hammer"
             />
             <div class="p-4">
@@ -813,7 +863,7 @@
           <!-- Product 4 -->
           <div class="product-card">
             <img
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop"
+              src="./assets/images/products/Welding Goggles.webp"
               alt="Welding Goggles"
             />
             <div class="p-4">
@@ -837,7 +887,7 @@
           <!-- Product 1 -->
           <div class="product-card">
             <img
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop"
+              src="./assets/images/products/Twin & Earth Cable.jpeg"
               alt="Twin & Earth Cable"
             />
             <div class="p-4">
@@ -855,7 +905,7 @@
           <!-- Product 2 -->
           <div class="product-card">
             <img
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop"
+              src="./assets/images/products/LED Bulb 9W.avif?v=1"
               alt="LED Bulb 9W"
             />
             <div class="p-4">
@@ -873,7 +923,7 @@
           <!-- Product 3 -->
           <div class="product-card">
             <img
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop"
+              src="./assets/images/products/PVC Pipes.jpg?v=1"
               alt="PVC Pipes"
             />
             <div class="p-4">
@@ -891,7 +941,7 @@
           <!-- Product 4 -->
         <div class="product-card">
             <img
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop"
+              src="./assets/images/products/Water Tank 1000L.jpg?v=1"
               alt="Water Tank 1000L"
             />
           <div class="p-4">
@@ -1585,6 +1635,7 @@
       function updateCartCount() {
         const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
         document.getElementById('cart-count').textContent = totalItems;
+        updateMobileCartCount();
       }
 
       function updateCartDisplay() {
@@ -1656,8 +1707,21 @@
         window.open(url, '_blank');
       }
 
+      // Mobile menu functionality
+      function toggleMobileMenu() {
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenu.classList.toggle('hidden');
+      }
+
+      // Update mobile cart count
+      function updateMobileCartCount() {
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        document.getElementById('mobile-cart-count').textContent = totalItems;
+      }
+
       // Initialize cart
       updateCartCount();
+      updateMobileCartCount();
     </script>
   </body>
 </html> 
