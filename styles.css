@@ -16,13 +16,13 @@ body {
 
 /* Header styles */
 .header-title {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #064b67;
 }
 
 .header-subtitle {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: #6b7280;
   font-weight: 500;
 }
@@ -30,7 +30,27 @@ body {
 /* Logo responsive styles */
 @media (max-width: 768px) {
   .header-title {
+    font-size: 1.25rem;
+  }
+
+  .header-subtitle {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-title {
     font-size: 1.125rem;
+  }
+
+  .header-subtitle {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 1rem;
   }
 
   .header-subtitle {
@@ -38,23 +58,23 @@ body {
   }
 }
 
-@media (max-width: 640px) {
+@media (min-width: 1024px) {
   .header-title {
-    font-size: 1rem;
+    font-size: 1.75rem;
   }
 
   .header-subtitle {
-    font-size: 0.7rem;
+    font-size: 1.125rem;
   }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 1280px) {
   .header-title {
-    font-size: 0.9rem;
+    font-size: 2rem;
   }
 
   .header-subtitle {
-    font-size: 0.65rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -1265,3 +1285,5 @@ footer .max-w-screen-4xl {
     color: #4b5563;
   }
 }
+
+/* Footer Logo Styling - Removed since using same structure as header */
