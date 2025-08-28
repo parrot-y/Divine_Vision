@@ -75,19 +75,42 @@
       <div class="flex items-center justify-between py-2">
         <a
           href="/"
-          class="flex items-center gap-3 group"
+          class="flex items-center gap-2 sm:gap-3 group"
           aria-label="Divine Vision - Home"
         >
           <img
             src="./assets/images/logos/logo.png"
             alt="Divine Vision Supplies Ltd Logo"
-            class="h-48 w-auto"
+            class="h-16 sm:h-20 md:h-24 lg:h-32 w-auto"
           />
           <div class="leading-tight">
             <div class="header-title">Divine Vision</div>
             <div class="header-subtitle">Supplies Ltd</div>
           </div>
         </a>
+        
+        <!-- Mobile Search Bar -->
+        <div class="md:hidden flex-1 mx-4">
+          <form role="search" class="relative" onsubmit="handleSearch(event)">
+            <label for="mobile-search" class="sr-only">Search for products</label>
+            <input
+              id="mobile-search"
+              type="search"
+              placeholder="Search products..."
+              class="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#FFBF00] focus:border-[#FFBF00] text-sm"
+              oninput="showSearchSuggestions(this.value)"
+              onfocus="showSearchSuggestions(this.value)"
+              onblur="hideSearchSuggestions()"
+            />
+            <div class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m21 21-4.34-4.34"></path>
+                <circle cx="11" cy="11" r="8"></circle>
+              </svg>
+            </div>
+          </form>
+        </div>
+        
         <!-- Categories Dropdown -->
         <div class="hidden md:flex items-center mr-4">
           <div class="relative group">
@@ -102,29 +125,32 @@
             </button>
             <div class="absolute top-full left-0 mt-1 w-64 bg-white border border-gray-200 rounded-md shadow-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
               <div class="py-2">
-                <a href="./roofing-mabati.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#064b67]">
-                  🏗️ Roofing & Mabati
+                <a href="./builders-materials-tools.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#064b67]">
+                  🏗️ Builder's Materials & Tools
                 </a>
-                <a href="./cement.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#064b67]">
-                  🧱 Cement
+                <a href="./power-lighting-materials-tools.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#064b67]">
+                  💡 Power & Lighting Materials & Tools
                 </a>
-                <a href="./steel-rebar.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#064b67]">
-                  🔩 Steel & Rebar
+                <a href="./fitting-carpenters-materials-tools.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#064b67]">
+                  🔨 Fitting Carpenters Materials and Tools
                 </a>
-                <a href="./electrical.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#064b67]">
-                  💡 Electrical
+                <a href="./plumbers-mechanical-materials-tools.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#064b67]">
+                  🔧 Plumber's & Mechanical Engineers Materials & Tools
                 </a>
-                <a href="./paint-finishes.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#064b67]">
-                  🎨 Paint & Finishes
+                <a href="./health-safety.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#064b67]">
+                  🛡️ Health & Safety
                 </a>
-                <a href="./pvc-floors.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#064b67]">
-                  🪵 PVC Floors
+                <a href="./painters-decoration-materials-tools.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#064b67]">
+                  🎨 Painters & Decoration Works Materials & Tools
                 </a>
-                <a href="./tools.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#064b67]">
-                  🛠️ Tools
+                <a href="./roofing-materials-solutions.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#064b67]">
+                  🏠 Roofing Materials & Roofing Solutions
                 </a>
-                <a href="./plumbing.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#064b67]">
-                  🚰 Plumbing
+                <a href="./waterproofing-solutions.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#064b67]">
+                  💧 Waterproofing Solutions
+                </a>
+                <a href="./fencing-hoarding-solutions.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#064b67]">
+                  🚧 Fencing & Hoarding Solutions
                 </a>
               </div>
             </div>
@@ -218,29 +244,32 @@
       <!-- Mobile Menu -->
       <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-200">
         <div class="px-4 py-2 space-y-1">
-          <a href="./roofing-mabati.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
-            🏗️ Roofing & Mabati
+          <a href="./builders-materials-tools.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
+            🏗️ Builder's Materials & Tools
           </a>
-          <a href="./cement.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
-            🧱 Cement
+          <a href="./power-lighting-materials-tools.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
+            💡 Power & Lighting Materials & Tools
           </a>
-          <a href="./steel-rebar.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
-            🔩 Steel & Rebar
+          <a href="./fitting-carpenters-materials-tools.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
+            🔨 Fitting Carpenters Materials and Tools
           </a>
-          <a href="./electrical.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
-            💡 Electrical
+          <a href="./plumbers-mechanical-materials-tools.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
+            🔧 Plumber's & Mechanical Engineers Materials & Tools
           </a>
-          <a href="./paint-finishes.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
-            🎨 Paint & Finishes
+          <a href="./health-safety.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
+            🛡️ Health & Safety
           </a>
-          <a href="./pvc-floors.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
-            🪵 PVC Floors
+          <a href="./painters-decoration-materials-tools.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
+            🎨 Painters & Decoration Works Materials & Tools
           </a>
-          <a href="./tools.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
-            🛠️ Tools
+          <a href="./roofing-materials-solutions.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
+            🏠 Roofing Materials & Roofing Solutions
           </a>
-          <a href="./plumbing.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
-            🚰 Plumbing
+          <a href="./waterproofing-solutions.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
+            💧 Waterproofing Solutions
+          </a>
+          <a href="./fencing-hoarding-solutions.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
+            🚧 Fencing & Hoarding Solutions
           </a>
           <a href="#contact" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
             📞 Contact
@@ -271,20 +300,20 @@
                   class="w-full h-full object-cover"
                 />
                 <div class="absolute inset-0 bg-black/30"></div>
-                <div class="relative z-10 px-6 md:px-12 text-white">
+                <div class="relative z-10 px-4 sm:px-6 md:px-8 lg:px-12 text-white">
                   <h1
-                    class="hero-carousel-title text-2xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight"
+                    class="hero-carousel-title text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2 sm:mb-3 leading-tight"
                   >
                     Quality Hardware & Building Materials
                   </h1>
                   <p
-                    class="hero-carousel-subtitle text-lg md:text-xl mb-6 text-gray-100 max-w-2xl"
+                    class="hero-carousel-subtitle text-sm sm:text-base md:text-lg lg:text-xl mb-4 sm:mb-6 text-gray-100 max-w-2xl"
                   >
                     Your Trusted Partner for All Construction Needs • Premium Quality • Fast Delivery
                   </p>
                   <a
                     href="#featured-products"
-                    class="hero-carousel-btn inline-block bg-[#064b67] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#053a52] transition-colors duration-300 shadow-lg"
+                    class="hero-carousel-btn inline-block bg-[#064b67] text-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-[#053a52] transition-colors duration-300 shadow-lg text-sm sm:text-base"
                   >
                     Shop Now
                   </a>
@@ -301,20 +330,20 @@
                   class="w-full h-full object-cover"
                 />
                 <div class="absolute inset-0 bg-black/30"></div>
-                <div class="relative z-10 px-6 md:px-12 text-white">
+                <div class="relative z-10 px-4 sm:px-6 md:px-8 lg:px-12 text-white">
                   <h1
-                    class="hero-carousel-title text-2xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight"
+                    class="hero-carousel-title text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2 sm:mb-3 leading-tight"
                   >
                     Professional Tools & Equipment
                   </h1>
                   <p
-                    class="hero-carousel-subtitle text-lg md:text-xl mb-6 text-gray-100 max-w-2xl"
+                    class="hero-carousel-subtitle text-sm sm:text-base md:text-lg lg:text-xl mb-4 sm:mb-6 text-gray-100 max-w-2xl"
                   >
                     Complete Range of Tools • Expert Advice • Quality Guaranteed
                   </p>
                   <a
-                    href="./tools.html"
-                    class="hero-carousel-btn inline-block bg-[#064b67] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#053a52] transition-colors duration-300 shadow-lg"
+                    href="./builders-materials-tools.html"
+                    class="hero-carousel-btn inline-block bg-[#064b67] text-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-[#053a52] transition-colors duration-300 shadow-lg text-sm sm:text-base"
                   >
                     Browse Tools
                   </a>
@@ -331,20 +360,20 @@
                   class="w-full h-full object-cover"
                 />
                 <div class="absolute inset-0 bg-black/30"></div>
-                <div class="relative z-10 px-6 md:px-12 text-white">
+                <div class="relative z-10 px-4 sm:px-6 md:px-8 lg:px-12 text-white">
                   <h1
-                    class="hero-carousel-title text-2xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight"
+                    class="hero-carousel-title text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2 sm:mb-3 leading-tight"
                   >
                     Wide Range of Hardware Products
                   </h1>
                   <p
-                    class="hero-carousel-subtitle text-lg md:text-xl mb-6 text-gray-100 max-w-2xl"
+                    class="hero-carousel-subtitle text-sm sm:text-base md:text-lg lg:text-xl mb-4 sm:mb-6 text-gray-100 max-w-2xl"
                   >
                     Everything You Need for Construction • Quality Materials • Competitive Prices
                   </p>
                   <a
                     href="#featured-products"
-                    class="hero-carousel-btn inline-block bg-[#064b67] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#053a52] transition-colors duration-300 shadow-lg"
+                    class="hero-carousel-btn inline-block bg-[#064b67] text-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-[#053a52] transition-colors duration-300 shadow-lg text-sm sm:text-base"
                   >
                     Explore Products
                   </a>
@@ -438,10 +467,10 @@
           <!-- Navigation Arrows -->
           <button
             id="prevBtn"
-            class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition-all duration-300 z-20"
+            class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-1.5 sm:p-2 rounded-full shadow-lg transition-all duration-300 z-20"
           >
             <svg
-              class="w-6 h-6"
+              class="w-4 h-4 sm:w-6 sm:h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -456,10 +485,10 @@
           </button>
           <button
             id="nextBtn"
-            class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition-all duration-300 z-20"
+            class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-1.5 sm:p-2 rounded-full shadow-lg transition-all duration-300 z-20"
           >
             <svg
-              class="w-6 h-6"
+              class="w-4 h-4 sm:w-6 sm:h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -475,26 +504,26 @@
 
           <!-- Dot Indicators -->
           <div
-            class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-20"
+            class="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 flex space-x-1 sm:space-x-2 z-20"
           >
             <button
-              class="carousel-dot w-3 h-3 rounded-full bg-white/60 hover:bg-white transition-all duration-300"
+              class="carousel-dot w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/60 hover:bg-white transition-all duration-300"
               data-slide="0"
             ></button>
             <button
-              class="carousel-dot w-3 h-3 rounded-full bg-white/60 hover:bg-white transition-all duration-300"
+              class="carousel-dot w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/60 hover:bg-white transition-all duration-300"
               data-slide="1"
             ></button>
             <button
-              class="carousel-dot w-3 h-3 rounded-full bg-white/60 hover:bg-white transition-all duration-300"
+              class="carousel-dot w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/60 hover:bg-white transition-all duration-300"
               data-slide="2"
             ></button>
             <button
-              class="carousel-dot w-3 h-3 rounded-full bg-white/60 hover:bg-white transition-all duration-300"
+              class="carousel-dot w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/60 hover:bg-white transition-all duration-300"
               data-slide="3"
             ></button>
             <button
-              class="carousel-dot w-3 h-3 rounded-full bg-white/60 hover:bg-white transition-all duration-300"
+              class="carousel-dot w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/60 hover:bg-white transition-all duration-300"
               data-slide="4"
             ></button>
           </div>
@@ -507,80 +536,93 @@
       <h2 class="section-title">Shop by Category</h2>
       <div class="category-grid">
         <!-- Card -->
-        <a href="./roofing-mabati.html" class="category-card">
+        <a href="./builders-materials-tools.html" class="category-card">
           <img
-            src="./assets/images/categories/roofing and mabati.jpeg"
-            alt="Roofing & Mabati"
+            src="./assets/images/categories/Builder's materials & Tools.jpeg"
+            alt="Builder's Materials & Tools"
           />
           <div class="p-3">
-            <div class="category-name">Roofing & Mabati</div>
+            <div class="category-name">Builder's Materials & Tools</div>
           </div>
         </a>
         <!-- Card -->
-        <a href="./cement.html" class="category-card">
+        <a href="./power-lighting-materials-tools.html" class="category-card">
           <img
-            src="./assets/images/categories/cement.webp"
-            alt="Cement"
+            src="./assets/images/categories/Power & Lighting materials & Tools.jpeg"
+            alt="Power & Lighting Materials & Tools"
           />
           <div class="p-3">
-            <div class="category-name">Cement</div>
+            <div class="category-name">Power & Lighting Materials & Tools</div>
           </div>
         </a>
         <!-- Card -->
-        <a href="./steel-rebar.html" class="category-card">
+        <a href="./fitting-carpenters-materials-tools.html" class="category-card">
           <img
-            src="./assets/images/categories/steel and rebar.jpeg"
-            alt="Steel & Rebar"
+            src="./assets/images/categories/Fitting Carpenters materials and tools.jpeg"
+            alt="Fitting Carpenters Materials and Tools"
           />
           <div class="p-3">
-            <div class="category-name">Steel & Rebar</div>
+            <div class="category-name">Fitting Carpenters Materials and Tools</div>
           </div>
         </a>
         <!-- Card -->
-        <a href="./electrical.html" class="category-card">
-          <img
-            src="./assets/images/categories/electricaltools.jpeg"
-            alt="Electrical"
-          />
-          <div class="p-3">
-            <div class="category-name">Electrical</div>
-          </div>
-        </a>
-        <!-- More placeholders repeating for grid symmetry -->
-        <a href="./paint-finishes.html" class="category-card">
-          <img
-            src="./assets/images/categories/paint and finishes.jpeg"
-            alt="Paint & Finishes"
-          />
-          <div class="p-3">
-            <div class="category-name">Paint & Finishes</div>
-          </div>
-        </a>
-        <a href="./pvc-floors.html" class="category-card">
-          <img
-            src="./assets/images/categories/PVC FLOORS.jpeg"
-            alt="PVC Floors"
-          />
-          <div class="p-3">
-            <div class="category-name">PVC Floors</div>
-          </div>
-        </a>
-        <a href="./tools.html" class="category-card">
-          <img
-            src="./assets/images/categories/TOOLS.jpeg"
-            alt="Tools"
-          />
-          <div class="p-3">
-            <div class="category-name">Tools</div>
-          </div>
-        </a>
-        <a href="./plumbing.html" class="category-card">
+        <a href="./plumbers-mechanical-materials-tools.html" class="category-card">
           <img
             src="./assets/images/categories/PLUMBING.jpeg"
-            alt="Plumbing"
+            alt="Plumber's & Mechanical Engineers Materials & Tools"
           />
           <div class="p-3">
-            <div class="category-name">Plumbing</div>
+            <div class="category-name">Plumber's & Mechanical Engineers Materials & Tools</div>
+          </div>
+        </a>
+        <!-- Card -->
+        <a href="./health-safety.html" class="category-card">
+          <img
+            src="./assets/images/categories/Health & safety.jpeg"
+            alt="Health & Safety"
+          />
+          <div class="p-3">
+            <div class="category-name">Health & Safety</div>
+          </div>
+        </a>
+        <!-- Card -->
+        <a href="./painters-decoration-materials-tools.html" class="category-card">
+          <img
+            src="./assets/images/categories/paint and finishes.jpeg"
+            alt="Painters & Decoration Works Materials & Tools"
+          />
+          <div class="p-3">
+            <div class="category-name">Painters & Decoration Works Materials & Tools</div>
+          </div>
+        </a>
+        <!-- Card -->
+        <a href="./roofing-materials-solutions.html" class="category-card">
+          <img
+            src="./assets/images/categories/roofing and mabati.jpeg"
+            alt="Roofing Materials & Roofing Solutions"
+          />
+          <div class="p-3">
+            <div class="category-name">Roofing Materials & Roofing Solutions</div>
+          </div>
+        </a>
+        <!-- Card -->
+        <a href="./waterproofing-solutions.html" class="category-card">
+          <img
+            src="./assets/images/categories/Waterproofing Solutions.jpeg"
+            alt="Waterproofing Solutions"
+          />
+          <div class="p-3">
+            <div class="category-name">Waterproofing Solutions</div>
+          </div>
+        </a>
+        <!-- Card -->
+        <a href="./fencing-hoarding-solutions.html" class="category-card">
+          <img
+            src="./assets/images/categories/Fencing & Hoarding Solutions"
+            alt="Fencing & Hoarding Solutions"
+          />
+          <div class="p-3">
+            <div class="category-name">Fencing & Hoarding Solutions</div>
           </div>
         </a>
       </div>
@@ -1071,337 +1113,103 @@
 
       function searchProducts(query) {
         const allProducts = [
-          // Roofing & Mabati
-          {
-            name: "corrugated iron sheets",
-            category: "roofing",
-            categoryUrl: "./roofing-mabati.html",
-          },
-          {
-            name: "mabati",
-            category: "roofing",
-            categoryUrl: "./roofing-mabati.html",
-          },
-          {
-            name: "roofing nails",
-            category: "roofing",
-            categoryUrl: "./roofing-mabati.html",
-          },
-          {
-            name: "ridge caps",
-            category: "roofing",
-            categoryUrl: "./roofing-mabati.html",
-          },
-          {
-            name: "gutters",
-            category: "roofing",
-            categoryUrl: "./roofing-mabati.html",
-          },
-          {
-            name: "downpipes",
-            category: "roofing",
-            categoryUrl: "./roofing-mabati.html",
-          },
+          // Builder's Materials & Tools
+          { name: "cement", category: "builders", categoryUrl: "./builders-materials-tools.html" },
+          { name: "bamburi", category: "builders", categoryUrl: "./builders-materials-tools.html" },
+          { name: "rhino", category: "builders", categoryUrl: "./builders-materials-tools.html" },
+          { name: "simba", category: "builders", categoryUrl: "./builders-materials-tools.html" },
+          { name: "white cement", category: "builders", categoryUrl: "./builders-materials-tools.html" },
+          { name: "steel", category: "builders", categoryUrl: "./builders-materials-tools.html" },
+          { name: "rebar", category: "builders", categoryUrl: "./builders-materials-tools.html" },
+          { name: "reinforcement bars", category: "builders", categoryUrl: "./builders-materials-tools.html" },
+          { name: "binding wire", category: "builders", categoryUrl: "./builders-materials-tools.html" },
+          { name: "wire mesh", category: "builders", categoryUrl: "./builders-materials-tools.html" },
+          { name: "tools", category: "builders", categoryUrl: "./builders-materials-tools.html" },
+          { name: "hammers", category: "builders", categoryUrl: "./builders-materials-tools.html" },
+          { name: "screwdrivers", category: "builders", categoryUrl: "./builders-materials-tools.html" },
+          { name: "spanners", category: "builders", categoryUrl: "./builders-materials-tools.html" },
+          { name: "power drills", category: "builders", categoryUrl: "./builders-materials-tools.html" },
+          { name: "measuring tapes", category: "builders", categoryUrl: "./builders-materials-tools.html" },
+          { name: "diamond cutting disc", category: "builders", categoryUrl: "./builders-materials-tools.html" },
+          { name: "flap disc", category: "builders", categoryUrl: "./builders-materials-tools.html" },
+          { name: "saw blade", category: "builders", categoryUrl: "./builders-materials-tools.html" },
+          { name: "hammer drill bit", category: "builders", categoryUrl: "./builders-materials-tools.html" },
+          { name: "hole saw", category: "builders", categoryUrl: "./builders-materials-tools.html" },
 
-          // Cement
-          { name: "cement", category: "cement", categoryUrl: "./cement.html" },
-          { name: "bamburi", category: "cement", categoryUrl: "./cement.html" },
-          { name: "rhino", category: "cement", categoryUrl: "./cement.html" },
-          { name: "simba", category: "cement", categoryUrl: "./cement.html" },
-          {
-            name: "white cement",
-            category: "cement",
-            categoryUrl: "./cement.html",
-          },
-          {
-            name: "tile adhesive",
-            category: "cement",
-            categoryUrl: "./cement.html",
-          },
+          // Power & Lighting Materials & Tools
+          { name: "electrical", category: "power", categoryUrl: "./power-lighting-materials-tools.html" },
+          { name: "cables", category: "power", categoryUrl: "./power-lighting-materials-tools.html" },
+          { name: "switches", category: "power", categoryUrl: "./power-lighting-materials-tools.html" },
+          { name: "sockets", category: "power", categoryUrl: "./power-lighting-materials-tools.html" },
+          { name: "circuit breakers", category: "power", categoryUrl: "./power-lighting-materials-tools.html" },
+          { name: "led bulbs", category: "power", categoryUrl: "./power-lighting-materials-tools.html" },
+          { name: "led bulb", category: "power", categoryUrl: "./power-lighting-materials-tools.html" },
+          { name: "electrical cable", category: "power", categoryUrl: "./power-lighting-materials-tools.html" },
+          { name: "wall switch", category: "power", categoryUrl: "./power-lighting-materials-tools.html" },
+          { name: "power socket", category: "power", categoryUrl: "./power-lighting-materials-tools.html" },
 
-          // Steel & Rebar
-          {
-            name: "steel",
-            category: "steel",
-            categoryUrl: "./steel-rebar.html",
-          },
-          {
-            name: "rebar",
-            category: "steel",
-            categoryUrl: "./steel-rebar.html",
-          },
-          {
-            name: "reinforcement bars",
-            category: "steel",
-            categoryUrl: "./steel-rebar.html",
-          },
-          {
-            name: "binding wire",
-            category: "steel",
-            categoryUrl: "./steel-rebar.html",
-          },
-          {
-            name: "wire mesh",
-            category: "steel",
-            categoryUrl: "./steel-rebar.html",
-          },
+          // Fitting Carpenters Materials and Tools
+          { name: "pvc", category: "carpenters", categoryUrl: "./fitting-carpenters-materials-tools.html" },
+          { name: "vinyl", category: "carpenters", categoryUrl: "./fitting-carpenters-materials-tools.html" },
+          { name: "floor tiles", category: "carpenters", categoryUrl: "./fitting-carpenters-materials-tools.html" },
+          { name: "skirting boards", category: "carpenters", categoryUrl: "./fitting-carpenters-materials-tools.html" },
+          { name: "pvc floor tiles", category: "carpenters", categoryUrl: "./fitting-carpenters-materials-tools.html" },
+          { name: "vinyl flooring", category: "carpenters", categoryUrl: "./fitting-carpenters-materials-tools.html" },
+          { name: "gypsum board", category: "carpenters", categoryUrl: "./fitting-carpenters-materials-tools.html" },
+          { name: "gypsum cornices", category: "carpenters", categoryUrl: "./fitting-carpenters-materials-tools.html" },
+          { name: "gypsum studs", category: "carpenters", categoryUrl: "./fitting-carpenters-materials-tools.html" },
 
-          // Electrical
-          {
-            name: "electrical",
-            category: "electrical",
-            categoryUrl: "./electrical.html",
-          },
-          {
-            name: "cables",
-            category: "electrical",
-            categoryUrl: "./electrical.html",
-          },
-          {
-            name: "switches",
-            category: "electrical",
-            categoryUrl: "./electrical.html",
-          },
-          {
-            name: "sockets",
-            category: "electrical",
-            categoryUrl: "./electrical.html",
-          },
-          {
-            name: "circuit breakers",
-            category: "electrical",
-            categoryUrl: "./electrical.html",
-          },
-          {
-            name: "led bulbs",
-            category: "electrical",
-            categoryUrl: "./electrical.html",
-          },
+          // Plumber's & Mechanical Engineers Materials & Tools
+          { name: "plumbing", category: "plumbers", categoryUrl: "./plumbers-mechanical-materials-tools.html" },
+          { name: "pipes", category: "plumbers", categoryUrl: "./plumbers-mechanical-materials-tools.html" },
+          { name: "taps", category: "plumbers", categoryUrl: "./plumbers-mechanical-materials-tools.html" },
+          { name: "water tanks", category: "plumbers", categoryUrl: "./plumbers-mechanical-materials-tools.html" },
+          { name: "toilet fittings", category: "plumbers", categoryUrl: "./plumbers-mechanical-materials-tools.html" },
+          { name: "shower heads", category: "plumbers", categoryUrl: "./plumbers-mechanical-materials-tools.html" },
+          { name: "water pipe", category: "plumbers", categoryUrl: "./plumbers-mechanical-materials-tools.html" },
+          { name: "bathroom tap", category: "plumbers", categoryUrl: "./plumbers-mechanical-materials-tools.html" },
+          { name: "kitchen tap", category: "plumbers", categoryUrl: "./plumbers-mechanical-materials-tools.html" },
+          { name: "water tank", category: "plumbers", categoryUrl: "./plumbers-mechanical-materials-tools.html" },
 
-          // Paint & Finishes
-          {
-            name: "paint",
-            category: "paint",
-            categoryUrl: "./paint-finishes.html",
-          },
-          {
-            name: "varnish",
-            category: "paint",
-            categoryUrl: "./paint-finishes.html",
-          },
-          {
-            name: "brushes",
-            category: "paint",
-            categoryUrl: "./paint-finishes.html",
-          },
-          {
-            name: "rollers",
-            category: "paint",
-            categoryUrl: "./paint-finishes.html",
-          },
+          // Health & Safety
+          { name: "safety equipment", category: "safety", categoryUrl: "./health-safety.html" },
+          { name: "protective gear", category: "safety", categoryUrl: "./health-safety.html" },
+          { name: "safety tools", category: "safety", categoryUrl: "./health-safety.html" },
+          { name: "workplace safety", category: "safety", categoryUrl: "./health-safety.html" },
 
-          // PVC Floors
-          { name: "pvc", category: "pvc", categoryUrl: "./pvc-floors.html" },
-          { name: "vinyl", category: "pvc", categoryUrl: "./pvc-floors.html" },
-          {
-            name: "floor tiles",
-            category: "pvc",
-            categoryUrl: "./pvc-floors.html",
-          },
-          {
-            name: "skirting boards",
-            category: "pvc",
-            categoryUrl: "./pvc-floors.html",
-          },
+          // Painters & Decoration Works Materials & Tools
+          { name: "paint", category: "painters", categoryUrl: "./painters-decoration-materials-tools.html" },
+          { name: "varnish", category: "painters", categoryUrl: "./painters-decoration-materials-tools.html" },
+          { name: "brushes", category: "painters", categoryUrl: "./painters-decoration-materials-tools.html" },
+          { name: "rollers", category: "painters", categoryUrl: "./painters-decoration-materials-tools.html" },
+          { name: "interior paint", category: "painters", categoryUrl: "./painters-decoration-materials-tools.html" },
+          { name: "exterior paint", category: "painters", categoryUrl: "./painters-decoration-materials-tools.html" },
+          { name: "paint brush", category: "painters", categoryUrl: "./painters-decoration-materials-tools.html" },
+          { name: "paint roller", category: "painters", categoryUrl: "./painters-decoration-materials-tools.html" },
 
-          // Tools
-          { name: "tools", category: "tools", categoryUrl: "./tools.html" },
-          { name: "hammers", category: "tools", categoryUrl: "./tools.html" },
-          {
-            name: "screwdrivers",
-            category: "tools",
-            categoryUrl: "./tools.html",
-          },
-          { name: "spanners", category: "tools", categoryUrl: "./tools.html" },
-          {
-            name: "power drills",
-            category: "tools",
-            categoryUrl: "./tools.html",
-          },
-          {
-            name: "measuring tapes",
-            category: "tools",
-            categoryUrl: "./tools.html",
-          },
+          // Roofing Materials & Roofing Solutions
+          { name: "corrugated iron sheets", category: "roofing", categoryUrl: "./roofing-materials-solutions.html" },
+          { name: "mabati", category: "roofing", categoryUrl: "./roofing-materials-solutions.html" },
+          { name: "roofing nails", category: "roofing", categoryUrl: "./roofing-materials-solutions.html" },
+          { name: "ridge caps", category: "roofing", categoryUrl: "./roofing-materials-solutions.html" },
+          { name: "gutters", category: "roofing", categoryUrl: "./roofing-materials-solutions.html" },
+          { name: "downpipes", category: "roofing", categoryUrl: "./roofing-materials-solutions.html" },
+          { name: "ordinary mabati", category: "roofing", categoryUrl: "./roofing-materials-solutions.html" },
+          { name: "coloured mabati", category: "roofing", categoryUrl: "./roofing-materials-solutions.html" },
+          { name: "clear plastic sheet", category: "roofing", categoryUrl: "./roofing-materials-solutions.html" },
+          { name: "steel nails", category: "roofing", categoryUrl: "./roofing-materials-solutions.html" },
 
-          // Plumbing
-          {
-            name: "plumbing",
-            category: "plumbing",
-            categoryUrl: "./plumbing.html",
-          },
-          {
-            name: "pipes",
-            category: "plumbing",
-            categoryUrl: "./plumbing.html",
-          },
-          {
-            name: "taps",
-            category: "plumbing",
-            categoryUrl: "./plumbing.html",
-          },
-          {
-            name: "water tanks",
-            category: "plumbing",
-            categoryUrl: "./plumbing.html",
-          },
-          {
-            name: "toilet fittings",
-            category: "plumbing",
-            categoryUrl: "./plumbing.html",
-          },
-          {
-            name: "shower heads",
-            category: "plumbing",
-            categoryUrl: "./plumbing.html",
-          },
-          
-          // Additional detailed products
-          {
-            name: "diamond cutting disc",
-            category: "tools",
-            categoryUrl: "./tools.html",
-          },
-          {
-            name: "flap disc",
-            category: "tools",
-            categoryUrl: "./tools.html",
-          },
-          {
-            name: "saw blade",
-            category: "tools",
-            categoryUrl: "./tools.html",
-          },
-          {
-            name: "hammer drill bit",
-            category: "tools",
-            categoryUrl: "./tools.html",
-          },
-          {
-            name: "hole saw",
-            category: "tools",
-            categoryUrl: "./tools.html",
-          },
-          {
-            name: "gypsum board",
-            category: "cement",
-            categoryUrl: "./cement.html",
-          },
-          {
-            name: "gypsum cornices",
-            category: "cement",
-            categoryUrl: "./cement.html",
-          },
-          {
-            name: "gypsum studs",
-            category: "cement",
-            categoryUrl: "./cement.html",
-          },
-          {
-            name: "ordinary mabati",
-            category: "roofing",
-            categoryUrl: "./roofing-mabati.html",
-          },
-          {
-            name: "coloured mabati",
-            category: "roofing",
-            categoryUrl: "./roofing-mabati.html",
-          },
-          {
-            name: "clear plastic sheet",
-            category: "roofing",
-            categoryUrl: "./roofing-mabati.html",
-          },
-          {
-            name: "roofing nails",
-            category: "roofing",
-            categoryUrl: "./roofing-mabati.html",
-          },
-          {
-            name: "steel nails",
-            category: "roofing",
-            categoryUrl: "./roofing-mabati.html",
-          },
-          {
-            name: "led bulb",
-            category: "electrical",
-            categoryUrl: "./electrical.html",
-          },
-          {
-            name: "electrical cable",
-            category: "electrical",
-            categoryUrl: "./electrical.html",
-          },
-          {
-            name: "wall switch",
-            category: "electrical",
-            categoryUrl: "./electrical.html",
-          },
-          {
-            name: "power socket",
-            category: "electrical",
-            categoryUrl: "./electrical.html",
-          },
-          {
-            name: "interior paint",
-            category: "paint",
-            categoryUrl: "./paint-finishes.html",
-          },
-          {
-            name: "exterior paint",
-            category: "paint",
-            categoryUrl: "./paint-finishes.html",
-          },
-          {
-            name: "paint brush",
-            category: "paint",
-            categoryUrl: "./paint-finishes.html",
-          },
-          {
-            name: "paint roller",
-            category: "paint",
-            categoryUrl: "./paint-finishes.html",
-          },
-          {
-            name: "pvc floor tiles",
-            category: "pvc",
-            categoryUrl: "./pvc-floors.html",
-          },
-          {
-            name: "vinyl flooring",
-            category: "pvc",
-            categoryUrl: "./pvc-floors.html",
-          },
-          {
-            name: "water pipe",
-            category: "plumbing",
-            categoryUrl: "./plumbing.html",
-          },
-          {
-            name: "bathroom tap",
-            category: "plumbing",
-            categoryUrl: "./plumbing.html",
-          },
-          {
-            name: "kitchen tap",
-            category: "plumbing",
-            categoryUrl: "./plumbing.html",
-          },
-          {
-            name: "water tank",
-            category: "plumbing",
-            categoryUrl: "./plumbing.html",
-          },
+          // Waterproofing Solutions
+          { name: "waterproofing", category: "waterproofing", categoryUrl: "./waterproofing-solutions.html" },
+          { name: "sealants", category: "waterproofing", categoryUrl: "./waterproofing-solutions.html" },
+          { name: "membranes", category: "waterproofing", categoryUrl: "./waterproofing-solutions.html" },
+          { name: "tile adhesive", category: "waterproofing", categoryUrl: "./waterproofing-solutions.html" },
+
+          // Fencing & Hoarding Solutions
+          { name: "fencing", category: "fencing", categoryUrl: "./fencing-hoarding-solutions.html" },
+          { name: "hoarding", category: "fencing", categoryUrl: "./fencing-hoarding-solutions.html" },
+          { name: "security fencing", category: "fencing", categoryUrl: "./fencing-hoarding-solutions.html" },
+          { name: "perimeter protection", category: "fencing", categoryUrl: "./fencing-hoarding-solutions.html" },
         ];
 
         const queryLower = query.toLowerCase();
@@ -1469,32 +1277,34 @@
 
       function getCategoryIcon(category) {
         const icons = {
+          builders: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" /></svg>',
+          power: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>',
+          carpenters: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 8.25 20.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25A2.25 2.25 0 0 1 13.5 8.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" /></svg>',
+          plumbers: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" /></svg>',
+          safety: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>',
+          painters: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 7.5h-.75A2.25 2.25 0 0 0 4.5 9.75v7.5a2.25 2.25 0 0 0 2.25 2.25h7.5a2.25 2.25 0 0 0 2.25-2.25v-7.5a2.25 2.25 0 0 0-2.25-2.25h-.75m-6 3L12 3m0 0 4.5 4.5M12 3v18" /></svg>',
           roofing: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V10.75c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21" /></svg>',
-          cement: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75V4.5a7.5 7.5 0 1 1-15 0v11.25a7.5 7.5 0 0 0 15 0Z" /></svg>',
-          steel: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75V4.5a7.5 7.5 0 1 1-15 0v11.25a7.5 7.5 0 0 0 15 0Z" /></svg>',
-          electrical: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>',
-          paint: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 7.5h-.75A2.25 2.25 0 0 0 4.5 9.75v7.5a2.25 2.25 0 0 0 2.25 2.25h7.5a2.25 2.25 0 0 0 2.25-2.25v-7.5a2.25 2.25 0 0 0-2.25-2.25h-.75m-6 3L12 3m0 0 4.5 4.5M12 3v18" /></svg>',
-          pvc: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 8.25 20.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25A2.25 2.25 0 0 1 13.5 8.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" /></svg>',
-          tools: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" /></svg>',
-          plumbing: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" /></svg>'
+          waterproofing: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" /></svg>',
+          fencing: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75V4.5a7.5 7.5 0 1 1-15 0v11.25a7.5 7.5 0 0 0 15 0Z" /></svg>'
         };
         
-        return icons[category] || icons.tools;
+        return icons[category] || icons.builders;
       }
 
       function getCategoryDisplayName(category) {
         const displayNames = {
-          roofing: 'Roofing & Mabati',
-          cement: 'Cement',
-          steel: 'Steel & Rebar',
-          electrical: 'Electrical',
-          paint: 'Paint & Finishes',
-          pvc: 'PVC Floors',
-          tools: 'Tools',
-          plumbing: 'Plumbing'
+          builders: "Builder's Materials & Tools",
+          power: "Power & Lighting Materials & Tools",
+          carpenters: "Fitting Carpenters Materials and Tools",
+          plumbers: "Plumber's & Mechanical Engineers Materials & Tools",
+          safety: "Health & Safety",
+          painters: "Painters & Decoration Works Materials & Tools",
+          roofing: "Roofing Materials & Roofing Solutions",
+          waterproofing: "Waterproofing Solutions",
+          fencing: "Fencing & Hoarding Solutions"
         };
         
-        return displayNames[category] || 'Tools';
+        return displayNames[category] || "Builder's Materials & Tools";
       }
 
       // Hero Carousel Functionality

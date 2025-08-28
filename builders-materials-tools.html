@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Builder's Materials & Tools | Divine Vision Supplies Ltd</title>
+    <meta
+      name="description"
+      content="Quality cement, steel reinforcement bars, construction tools, and building materials. Complete range for construction projects."
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/images/logos/favicon.ico"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="bg-white text-gray-900">
+    <!-- Header -->
+    <div class="max-w-screen-4xl mx-auto px-3 sm:px-4 md:px-8 py-2">
+      <div class="flex items-center justify-between py-2">
+        <a
+          href="/"
+          class="flex items-center gap-3 group"
+          aria-label="Divine Vision - Home"
+        >
+          <img
+            src="./assets/images/logos/logo.png"
+            alt="Divine Vision Supplies Ltd Logo"
+            class="h-24 w-auto"
+          />
+          <div class="leading-tight">
+            <div class="header-title">Divine Vision</div>
+            <div class="header-subtitle">Supplies Ltd</div>
+          </div>
+        </a>
+        <a
+          href="/"
+          class="text-[#064b67] hover:text-[#FFBF00] transition-colors"
+        >
+          ← Back to Home
+        </a>
+      </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="max-w-screen-4xl mx-auto px-3 sm:px-4 md:px-8 py-6">
+      <h1 class="section-title">Builder's Materials & Tools</h1>
+      <p class="section-subtitle">
+        Quality cement, steel reinforcement bars, construction tools, and building materials for all your construction projects.
+      </p>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="max-w-screen-4xl mx-auto px-3 sm:px-4 md:px-8 py-6">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+                <!-- Cement Products -->
+                <div class="product-card">
+                    <img src="./assets/images/products/Bamburi50kg.webp" alt="Bamburi Cement 50kg" />
+                    <div class="p-4">
+                        <div class="product-name">Bamburi Cement 50kg</div>
+                        <div class="product-description">High-quality cement for construction</div>
+                        <button class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#064b67] text-white rounded-md" onclick="addToCart('Bamburi Cement 50kg', 'High-quality cement for construction')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/images/products/Rhino Cement.jpeg" alt="Rhino Cement" />
+                    <div class="p-4">
+                        <div class="product-name">Rhino Cement</div>
+                        <div class="product-description">Premium cement for all construction needs</div>
+                        <button class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#064b67] text-white rounded-md" onclick="addToCart('Rhino Cement', 'Premium cement for all construction needs')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/images/products/Simba Cement.avif" alt="Simba Cement" />
+                    <div class="p-4">
+                        <div class="product-name">Simba Cement</div>
+                        <div class="product-description">Reliable cement for building projects</div>
+                        <button class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#064b67] text-white rounded-md" onclick="addToCart('Simba Cement', 'Reliable cement for building projects')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/images/products/White Cement.jpeg" alt="White Cement" />
+                    <div class="p-4">
+                        <div class="product-name">White Cement</div>
+                        <div class="product-description">Specialized white cement for finishing</div>
+                        <button class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#064b67] text-white rounded-md" onclick="addToCart('White Cement', 'Specialized white cement for finishing')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/images/products/Cement Blocks.jpeg" alt="Cement Blocks" />
+                    <div class="p-4">
+                        <div class="product-name">Cement Blocks</div>
+                        <div class="product-description">Standard cement blocks for construction</div>
+                        <button class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#064b67] text-white rounded-md" onclick="addToCart('Cement Blocks', 'Standard cement blocks for construction')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Steel & Rebar Products -->
+                <div class="product-card">
+                    <img src="./assets/images/products/steelreinforcementbar.jpg" alt="Steel Reinforcement Bar" />
+                    <div class="p-4">
+                        <div class="product-name">Steel Reinforcement Bar</div>
+                        <div class="product-description">High-strength steel rebar for concrete reinforcement</div>
+                        <button class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#064b67] text-white rounded-md" onclick="addToCart('Steel Reinforcement Bar', 'High-strength steel rebar for concrete reinforcement')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/images/products/Barbed Wire 480m.jpeg" alt="Barbed Wire 480m" />
+                    <div class="p-4">
+                        <div class="product-name">Barbed Wire 480m</div>
+                        <div class="product-description">Security barbed wire for fencing</div>
+                        <button class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#064b67] text-white rounded-md" onclick="addToCart('Barbed Wire 480m', 'Security barbed wire for fencing')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/images/products/Barbed Wire 610m.jpeg" alt="Barbed Wire 610m" />
+                    <div class="p-4">
+                        <div class="product-name">Barbed Wire 610m</div>
+                        <div class="product-description">Heavy-duty barbed wire for security</div>
+                        <button class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#064b67] text-white rounded-md" onclick="addToCart('Barbed Wire 610m', 'Heavy-duty barbed wire for security')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/images/products/Razor Wire (Green).jpeg" alt="Razor Wire (Green)" />
+                    <div class="p-4">
+                        <div class="product-name">Razor Wire (Green)</div>
+                        <div class="product-description">High-security razor wire in green</div>
+                        <button class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#064b67] text-white rounded-md" onclick="addToCart('Razor Wire (Green)', 'High-security razor wire in green')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/images/products/Razor Wire (Silver).jpeg" alt="Razor Wire (Silver)" />
+                    <div class="p-4">
+                        <div class="product-name">Razor Wire (Silver)</div>
+                        <div class="product-description">High-security razor wire in silver</div>
+                        <button class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#064b67] text-white rounded-md" onclick="addToCart('Razor Wire (Silver)', 'High-security razor wire in silver')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tools Products -->
+                <div class="product-card">
+                    <img src="./assets/images/products/4.5\" Diamond Cutting Disk A.avif" alt="4.5\" Diamond Cutting Disk A" />
+                    <div class="p-4">
+                        <div class="product-name">4.5" Diamond Cutting Disk A</div>
+                        <div class="product-description">Professional cutting disk for construction</div>
+                        <button class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#064b67] text-white rounded-md" onclick="addToCart('4.5\" Diamond Cutting Disk A', 'Professional cutting disk for construction')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/images/products/4.5\" Flap Disc P80.jpeg" alt="4.5\" Flap Disc P80" />
+                    <div class="p-4">
+                        <div class="product-name">4.5" Flap Disc P80</div>
+                        <div class="product-description">High-quality flap disc for surface finishing</div>
+                        <button class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#064b67] text-white rounded-md" onclick="addToCart('4.5\" Flap Disc P80', 'High-quality flap disc for surface finishing')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/images/products/Metal Hammer.jpeg" alt="Metal Hammer" />
+                    <div class="p-4">
+                        <div class="product-name">Metal Hammer</div>
+                        <div class="product-description">Professional metal hammer for construction</div>
+                        <button class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#064b67] text-white rounded-md" onclick="addToCart('Metal Hammer', 'Professional metal hammer for construction')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/images/products/Mason Hammer.jpeg" alt="Mason Hammer" />
+                    <div class="p-4">
+                        <div class="product-name">Mason Hammer</div>
+                        <div class="product-description">Specialized hammer for masonry work</div>
+                        <button class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#064b67] text-white rounded-md" onclick="addToCart('Mason Hammer', 'Specialized hammer for masonry work')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/images/products/Circular Saw.jpeg" alt="Circular Saw" />
+                    <div class="p-4">
+                        <div class="product-name">Circular Saw</div>
+                        <div class="product-description">Professional circular saw for cutting</div>
+                        <button class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#064b67] text-white rounded-md" onclick="addToCart('Circular Saw', 'Professional circular saw for cutting')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/images/products/Tape Measure.jpeg" alt="Tape Measure" />
+                    <div class="p-4">
+                        <div class="product-name">Tape Measure</div>
+                        <div class="product-description">Professional tape measure for accurate measurements</div>
+                        <button class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#064b67] text-white rounded-md" onclick="addToCart('Tape Measure', 'Professional tape measure for accurate measurements')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/images/products/Spirit Level.jpeg" alt="Spirit Level" />
+                    <div class="p-4">
+                        <div class="product-name">Spirit Level</div>
+                        <div class="product-description">Professional spirit level for leveling</div>
+                        <button class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#064b67] text-white rounded-md" onclick="addToCart('Spirit Level', 'Professional spirit level for leveling')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="./assets/images/products/File 8\".jpeg" alt="File 8\"" />
+                    <div class="p-4">
+                        <div class="product-name">File 8"</div>
+                        <div class="product-description">Professional file for metal work</div>
+                        <button class="mt-3 inline-flex items-center gap-2 px-3 py-2 bg-[#064b67] text-white rounded-md" onclick="addToCart('File 8\"', 'Professional file for metal work')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WhatsApp Button -->
+        <button
+          class="whatsapp-float"
+          onclick="window.open('https://wa.me/254708650558?text=Hi! I need information about Builder\'s Materials & Tools products.', '_blank')"
+        >
+          📱
+        </button>
+
+      </body>
+        <script>
+          // Cart functionality
+          let cart = [];
+
+          function addToCart(productName, productDescription) {
+            const existingItem = cart.find((item) => item.name === productName);
+            if (existingItem) {
+              existingItem.quantity += 1;
+            } else {
+              cart.push({
+                name: productName,
+                description: productDescription,
+                quantity: 1,
+              });
+            }
+            alert(`${productName} added to cart!`);
+          }
+        </script>
+    </html> 
