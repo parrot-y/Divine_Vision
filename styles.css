@@ -1,3 +1,8 @@
+/* Smooth scrolling for navigation links */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Reset and base styles */
 * {
   margin: 0;
@@ -16,29 +21,19 @@ body {
 
 /* Header styles */
 .header-title {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #064b67;
 }
 
 .header-subtitle {
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: #6b7280;
   font-weight: 500;
 }
 
 /* Logo responsive styles */
 @media (max-width: 768px) {
-  .header-title {
-    font-size: 1.25rem;
-  }
-
-  .header-subtitle {
-    font-size: 0.875rem;
-  }
-}
-
-@media (max-width: 640px) {
   .header-title {
     font-size: 1.125rem;
   }
@@ -48,7 +43,7 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .header-title {
     font-size: 1rem;
   }
@@ -58,23 +53,33 @@ body {
   }
 }
 
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 0.875rem;
+  }
+
+  .header-subtitle {
+    font-size: 0.7rem;
+  }
+}
+
 @media (min-width: 1024px) {
+  .header-title {
+    font-size: 1.5rem;
+  }
+
+  .header-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1280px) {
   .header-title {
     font-size: 1.75rem;
   }
 
   .header-subtitle {
     font-size: 1.125rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .header-title {
-    font-size: 2rem;
-  }
-
-  .header-subtitle {
-    font-size: 1.25rem;
   }
 }
 
@@ -1237,6 +1242,18 @@ footer .max-w-screen-4xl {
   /* Mobile search improvements */
   #mobile-search {
     font-size: 16px; /* Prevents zoom on iOS */
+    background-color: white;
+    border-color: #ffbf00 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  #mobile-search:focus {
+    box-shadow: 0 0 0 3px rgba(255, 191, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  #mobile-search::placeholder {
+    color: #064b67;
+    opacity: 0.7;
   }
 
   /* Better mobile button sizing */
@@ -1287,3 +1304,75 @@ footer .max-w-screen-4xl {
 }
 
 /* Footer Logo Styling - Removed since using same structure as header */
+
+/* Search Suggestions Styling */
+.search-suggestion-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.search-suggestion-item:hover {
+  background-color: #f9fafb;
+}
+
+.search-suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.search-suggestion-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: #064b67;
+}
+
+.search-suggestion-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.search-suggestion-title {
+  font-weight: 600;
+  color: #064b67;
+  margin-bottom: 2px;
+  font-size: 14px;
+}
+
+.search-suggestion-category {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.search-suggestion-highlight {
+  background-color: #ffbf00;
+  color: #064b67;
+  padding: 1px 2px;
+  border-radius: 2px;
+  font-weight: 700;
+}
+
+/* Mobile search suggestions */
+@media (max-width: 768px) {
+  .search-suggestion-item {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .search-suggestion-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .search-suggestion-title {
+    font-size: 16px;
+  }
+
+  .search-suggestion-category {
+    font-size: 14px;
+  }
+}
