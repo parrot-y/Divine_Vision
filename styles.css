@@ -1376,3 +1376,48 @@ footer .max-w-screen-4xl {
     font-size: 14px;
   }
 }
+
+/* Partners Carousel Styles */
+.partners-carousel {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.partner-slide {
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.partner-slide:hover {
+  transform: translateY(-5px);
+}
+
+/* Partners section responsive adjustments */
+@media (max-width: 768px) {
+  .partner-slide {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .partner-slide {
+    width: 33.333% !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .partner-slide {
+    width: 20% !important;
+  }
+}
+
+/* Smooth animation for partner cards */
+.partner-slide .bg-white {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.partner-slide .bg-white:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
