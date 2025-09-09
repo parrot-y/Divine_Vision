@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://divinevisionhardware.netlify.app/sitemap.xml
+
+# Crawl-delay for better server performance
+Crawl-delay: 1
+
+# Block access to admin areas and sensitive files
+Disallow: /admin/
+Disallow: /_headers
+Disallow: /_redirects
+Disallow: /netlify.toml
+Disallow: /*.log$
+Disallow: /assets/images/logos/favicon.ico
+
+# Allow all product pages and categories
+Allow: /health-safety.html
+Allow: /painters-decoration-materials-tools.html
+Allow: /roofing-materials-solutions.html
+Allow: /fencing-hoarding-solutions.html
+Allow: /plumbers-mechanical-materials-tools.html
+Allow: /fitting-carpenters-materials-tools.html
+Allow: /builders-materials-tools.html
+Allow: /waterproofing-solutions.html
+Allow: /assets/images/products/
+Allow: /assets/images/categories/
