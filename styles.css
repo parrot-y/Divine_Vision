@@ -532,6 +532,9 @@ footer .max-w-screen-4xl {
   justify-content: center;
   gap: 0.5rem;
   margin-top: auto;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  min-height: 44px;
 }
 
 .product-card button:hover {
@@ -541,11 +544,52 @@ footer .max-w-screen-4xl {
   box-shadow: 0 10px 25px -5px rgba(6, 75, 103, 0.3);
 }
 
+/* Mobile-specific enhancements */
+@media (max-width: 768px) {
+  .product-card button {
+    min-height: 48px;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  .product-card button:active {
+    background: #064b67;
+    color: white;
+    transform: scale(0.98);
+  }
+}
+
 /* Hide complex elements by default */
 .product-rating,
 .product-status,
 .product-badge {
   display: none;
+}
+
+/* Mobile Performance Optimizations */
+@media (max-width: 768px) {
+  /* Improve scrolling performance */
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Optimize image loading */
+  .product-card img {
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+  
+  /* Better touch targets */
+  a, button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Smooth transitions on mobile */
+  .product-card {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
 }
 
 /* Responsive Product Card Images */
