@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://divinevisionhardware.netlify.app/sitemap.xml
+Sitemap: https://www.divinevisionsuppliesltd.com/sitemap.xml
 
 # Crawl-delay for better server performance
 Crawl-delay: 1
